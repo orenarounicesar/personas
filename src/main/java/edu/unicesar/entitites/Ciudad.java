@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Serdeable.Serializable
+@Serdeable.Deserializable
 @Data
 @Builder
 @NoArgsConstructor

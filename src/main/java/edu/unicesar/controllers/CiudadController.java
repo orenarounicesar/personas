@@ -2,9 +2,7 @@ package edu.unicesar.controllers;
 
 import edu.unicesar.entitites.Ciudad;
 import edu.unicesar.services.CiudadService;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.PathVariable;
+import io.micronaut.http.annotation.*;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
 
@@ -28,5 +26,10 @@ public class CiudadController {
     @Get("/id")
     public Optional<Ciudad> getAllCiudades(@PathVariable("id") Integer id) {
         return ciudadService.findById(id);
+    }
+
+    @Post
+    public Ciudad citySave(@Body Ciudad ciudad) {
+        return ciudadService.citySave(ciudad);
     }
 }

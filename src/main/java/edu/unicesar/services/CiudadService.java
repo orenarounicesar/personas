@@ -23,4 +23,8 @@ public class CiudadService {
     public Optional<Ciudad> findById(Integer id) {
         return ciudadRepository.findById(id);
     }
+
+    public Ciudad citySave(Ciudad ciudad) {
+        return ciudadRepository.save(ciudad);
+    }
 }
